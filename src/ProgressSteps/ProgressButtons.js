@@ -4,12 +4,15 @@ import styled from 'styled-components/native';
 
 const Container = styled.View`
   background: #3b5bfd;
-  padding: 5px;
+  padding: 5px 20px;
 `;
 
 const NextBtn = styled.View`
   background: #3b5bfd;
   align-self: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ProgressButtons = props => (
