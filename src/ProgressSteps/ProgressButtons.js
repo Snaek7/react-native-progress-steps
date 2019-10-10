@@ -1,11 +1,22 @@
 import React from 'react';
 import { View } from 'react-native';
+import styled from 'styled-components/native';
+
+const Container = styled.View`
+  background: #3b5bfd;
+  padding: 5px;
+`;
+
+const NextBtn = styled.View`
+  background: #3b5bfd;
+  align-self: flex-end;
+`;
 
 const ProgressButtons = props => (
-  <View style={{ flexDirection: 'row', marginTop: 90 }}>
-    <View style={{ position: 'absolute', left: 60, bottom: 40 }}>{props.renderPreviousButton()}</View>
-    <View style={{ position: 'absolute', right: 60, bottom: 40 }}>{props.renderNextButton()}</View>
-  </View>
+  <Container>
+    <View>{props.renderPreviousButton()}</View>
+    <NextBtn>{props.renderNextButton()}</NextBtn>
+  </Container>
 );
 
 export default ProgressButtons;
