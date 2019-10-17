@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import styled from 'styled-components/native';
 
 import ProgressButtons from './ProgressButtons';
+
+const Container = styled.View`
+  flex: 1;
+`;
 
 class ProgressStep extends Component {
   onNextStep = async () => {
@@ -36,7 +41,7 @@ class ProgressStep extends Component {
 
     const btnTextStyle = {
       color: '#fff',
-      fontSize: 16,
+      fontSize: 18,
       margin: 0,
       padding: 0,
       ...this.props.nextBtnTextStyle,
@@ -77,7 +82,7 @@ class ProgressStep extends Component {
 
     const btnTextStyle = {
       color: '#fff',
-      fontSize: 16,
+      fontSize: 18,
       ...this.props.previousBtnTextStyle,
     };
 
@@ -105,7 +110,7 @@ class ProgressStep extends Component {
 
     return (
       <>
-        <ScrollView {...scrollViewProps}>{this.props.children}</ScrollView>
+        <Container>{this.props.children}</Container>
 
         <ProgressButtons
           renderNextButton={this.renderNextButton}
