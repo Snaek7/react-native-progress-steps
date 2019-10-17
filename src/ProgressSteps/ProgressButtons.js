@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const Container = styled.View`
   background: #3b5bfd;
-  padding: 5px 20px;
+  padding: 15px 20px;
 `;
 
 const NextBtn = styled.View`
